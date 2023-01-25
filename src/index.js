@@ -4,6 +4,38 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// import { heroes } from "./data/heroes";
+import { heroes}  from './data/heroes/heroes'
+//imp+tab 
+
+// ejercicio 
+
+// const getHerobyId = (id) =>{
+
+//   return heroes.find( (heroes)  => {
+//     if( heroes.id === id) {
+//       return true;
+//     }else {
+//       return true
+//     }
+//     });
+// }
+
+// console.log(getHerobyId(2));
+
+const getHerobyId = (id) =>{ 
+   return heroes.find( (heroes)  => heroes.id === id )
+}
+
+console.log(getHerobyId(2));
+
+// find no se usa , solo el filter 
+
+const getHeroesbyOwner = (owner) => heroes.filter( (heroes) => heroes.owner === owner  )
+
+console.log(getHeroesbyOwner("Marvel"));
+
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
